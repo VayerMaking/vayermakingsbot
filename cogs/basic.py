@@ -42,7 +42,7 @@ class Basic(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    bot.remove_command('help')
+    #bot.remove_command('help')
 
     @commands.command()
     async def help(self, ctx):

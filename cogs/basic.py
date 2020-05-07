@@ -61,4 +61,5 @@ class Basic(commands.Cog):
         await ctx.send(embed=embed)
 
 def setup(client):
+    client.remove_command('help')
     client.add_cog(Basic(client))

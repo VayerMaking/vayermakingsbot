@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+import config
 
 class Reactions(commands.Cog):
     def __init__(self, client):
@@ -10,10 +10,10 @@ class Reactions(commands.Cog):
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
         message_id = payload.message_id
-        if message_id == 699987157972156516:
+        if message_id == config.your_message_id:
             guild_id = payload.guild_id
             guild = discord.utils.find(lambda  g : g.id == guild_id, bot.guilds)
-
+            #here you add the emoji name in the if/else statement and add the role name after name='
             if payload.emoji.name == 'nekvi_zaeti':
                 role = discord.utils.get(guild.roles, name='nekvi_zaeti')
             elif payload.emoji.name == 'samotnitzi_bez_jena':
@@ -40,7 +40,7 @@ class Reactions(commands.Cog):
         @commands.Cog.listener()
         async def on_raw_reaction_remove(self, payload):
             message_id = payload.message_id
-            if message_id == 699987157972156516:
+            if message_id == config.your_message_id:
                 guild_id = payload.guild_id
                 guild = discord.utils.find(lambda g: g.id == guild_id, bot.guilds)
 
@@ -70,5 +70,5 @@ class Reactions(commands.Cog):
 
 
 
-    def setup(client):
-        client.add_cog(Reactions(client))
+def setup(client):
+    client.add_cog(Reactions(client))

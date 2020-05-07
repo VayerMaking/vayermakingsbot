@@ -1,7 +1,7 @@
 # vayermakingsbot
 ##This is my Discord bot
 ##Features
-"""
+```
 $add X Y
 Gives the addition of X and Y
 $multiply X Y
@@ -21,4 +21,4 @@ Shows who's online now in the server
 $ping
 Shows the latency of the server
 Also has a feature to get a role from reaction to a message
-"""
+```

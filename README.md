@@ -1,5 +1,10 @@
 # vayermakingsbot
 ## This is my Discord bot
+### You have to add a `config.py` file, containing your bot token and message id for the reactions like this
+```
+token = "your-token-here"
+your_message_id = "the-messageid-of-the-message-you-want-people-to-react-to"
+```
 ## Features
 ```
 $add X Y

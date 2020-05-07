@@ -1,6 +1,6 @@
 # vayermakingsbot
-##This is my Discord bot
-##Features
+## This is my Discord bot
+## Features
 ```
 $add X Y
 Gives the addition of X and Y
